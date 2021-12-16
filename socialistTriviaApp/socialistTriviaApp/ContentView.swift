@@ -19,9 +19,11 @@ struct ContentView: View {
                         .font(.title)
                         .fontWeight(.light)
                         .multilineTextAlignment(.center)
-                    
-                    Spacer()
+                    Image("marxlenin").resizable().frame(width: 100, height: 100)
 
+                    Spacer()
+                    
+                    Text("Latest Quiz")
                     NavigationLink(
                         destination: Quiz1920View())
                     {
@@ -30,7 +32,7 @@ struct ContentView: View {
                     }
                     
                     Spacer()
-                    Text("more to come")
+                    Text("Additional Quizzes Here:")
                         .font(.body)
                     Spacer()
                 }
