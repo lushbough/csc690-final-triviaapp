@@ -14,6 +14,9 @@
 		02CFD9FA2769BEED0091DFB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02CFD9F92769BEED0091DFB2 /* Assets.xcassets */; };
 		02CFD9FD2769BEED0091DFB2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02CFD9FC2769BEED0091DFB2 /* Preview Assets.xcassets */; };
 		02CFDA002769BEED0091DFB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02CFD9FE2769BEED0091DFB2 /* LaunchScreen.storyboard */; };
+		02CFDA0A276AFC5E0091DFB2 /* bottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CFDA09276AFC5E0091DFB2 /* bottom.swift */; };
+		02CFDA0C276B0B090091DFB2 /* GameSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CFDA0B276B0B090091DFB2 /* GameSequence.swift */; };
+		02CFDA0E276B0C3E0091DFB2 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CFDA0D276B0C3E0091DFB2 /* GameViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		02CFD9FC2769BEED0091DFB2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		02CFD9FF2769BEED0091DFB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02CFDA012769BEED0091DFB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02CFDA09276AFC5E0091DFB2 /* bottom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bottom.swift; sourceTree = "<group>"; };
+		02CFDA0B276B0B090091DFB2 /* GameSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSequence.swift; sourceTree = "<group>"; };
+		02CFDA0D276B0C3E0091DFB2 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,9 @@
 				02CFDA012769BEED0091DFB2 /* Info.plist */,
 				02CFD9F42769BEEB0091DFB2 /* socialistTriviaApp.xcdatamodeld */,
 				02CFD9FB2769BEED0091DFB2 /* Preview Content */,
+				02CFDA09276AFC5E0091DFB2 /* bottom.swift */,
+				02CFDA0B276B0B090091DFB2 /* GameSequence.swift */,
+				02CFDA0D276B0C3E0091DFB2 /* GameViewModel.swift */,
 			);
 			path = socialistTriviaApp;
 			sourceTree = "<group>";
@@ -151,8 +160,11 @@
 			files = (
 				02CFD9F12769BEEB0091DFB2 /* AppDelegate.swift in Sources */,
 				02CFD9F62769BEEB0091DFB2 /* socialistTriviaApp.xcdatamodeld in Sources */,
+				02CFDA0C276B0B090091DFB2 /* GameSequence.swift in Sources */,
 				02CFD9F82769BEEB0091DFB2 /* ContentView.swift in Sources */,
+				02CFDA0A276AFC5E0091DFB2 /* bottom.swift in Sources */,
 				02CFD9F32769BEEB0091DFB2 /* SceneDelegate.swift in Sources */,
+				02CFDA0E276B0C3E0091DFB2 /* GameViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
