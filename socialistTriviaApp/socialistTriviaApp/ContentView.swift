@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+        
     var body: some View {
             
             NavigationView {
@@ -48,7 +48,12 @@ struct Quiz1920View: View {
     
   //  @State var currentScores: [QuizScore] = []
     
-    @StateObject var viewModel = GameViewModel()
+//    @StateObject var viewModel = GameViewModel()
+    
+    @State var i : Int = 0
+    @State var score = 0
+
+    
     
     @State var userGuessIndex: Int? = nil
     
@@ -57,33 +62,36 @@ struct Quiz1920View: View {
         {
             Text("1920s Quiz Here")
             Spacer()
-            Text("Question 1 / 2")
+            Text("Question \(self.i + 1) / \(Question.allQuestions.count + 1)")
             Spacer()
-            Text(viewModel.questionText)
+            Text(Question.allQuestions[i].questionText)
             Spacer()
             Spacer()
             HStack{
-                ForEach(viewModel.answerIndices){ index in
+                ForEach(Question.allQuestions[self.i].answersAvailable.indices){ index in
                     Button(action: {
                         self.userGuessIndex = index
                         print("selected")
+                        if (self.userGuessIndex == Question.allQuestions[self.i].correctAnswerIndex) {
+                            self.score = self.score + 1;
+                        }
                     }) {
-                        Text(self.viewModel.answerText(for: index))
+                        Text(Question.allQuestions[self.i].answersAvailable[index])
                             .disabled(self.userGuessIndex != nil)
                     }
                 }
-            }
-            if userGuessIndex != nil {
-                Bottom(){
-                    self.viewModel.advanceGameState()
+                }; if userGuessIndex != nil {
+                Button(action: {
+                    self.i = self.i + 1;
+                }){
+                    Text("Next")
                 };
             }
+            }
+
     }
-    }
-    
-    
-    
 }
+
 
 struct Question {
     let questionText: String
@@ -94,9 +102,15 @@ struct Question {
         Question(questionText: "Lenin joined the Bolsheviks when?", answersAvailable: ["1917", "1895", "1900", "1848"], correctAnswerIndex: 1),
         Question(questionText: "Trotsky joined the Bolsheviks when?", answersAvailable: ["1917", "1895", "1900", "1848"], correctAnswerIndex: 0),
         Question(questionText: "When was Karl Marx born?", answersAvailable: ["1917", "1895", "1900", "1826"], correctAnswerIndex: 3),
-        
-        
     ]
+}
+
+func SaveScore(quiz: String, score: Int) {
+    UserDefaults.standard.set(score, forKey: quiz)
+}
+
+func LoadScore(quiz: String) -> Int{
+    return UserDefaults.standard.integer(forKey: quiz)
 }
 
 
