@@ -1,6 +1,6 @@
 # csc690-final-triviaapp
 
-William Lushbough
+Student: William Lushbough 920631410
 
 Proposal:   This is a trivia application focused on Socialist History. The questions are all multiple choice. It's also possible to take multiple quizzes.
 
