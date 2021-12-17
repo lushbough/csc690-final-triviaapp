@@ -1,9 +1,6 @@
 //
 //  socialistTriviaApp
 //  CSC690
-//
-//  Copyright © 2021 Willie. All rights reserved.
-//
 
 import SwiftUI
 
