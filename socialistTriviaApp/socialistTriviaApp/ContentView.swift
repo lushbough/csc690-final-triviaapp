@@ -1,8 +1,7 @@
 //
-//  ContentView.swift
 //  socialistTriviaApp
+//  CSC690
 //
-//  Created by JPL-ST-SPRING2021 on 12/14/21.
 //  Copyright © 2021 Willie. All rights reserved.
 //
 
@@ -23,7 +22,8 @@ struct ContentView: View {
 
                     Spacer()
                     
-                    Text("Latest Quiz")
+                    Text("Latest Quiz:")
+                    Spacer()
                     NavigationLink(
                         destination: Quiz1920View())
                     {
@@ -34,7 +34,8 @@ struct ContentView: View {
                     Spacer()
                     Text("Additional Quizzes Here:")
                         .font(.body)
-                    Spacer()
+                    Image(systemName: "wrench")
+                    Text("under construction")
                 }
             }
     }
@@ -85,10 +86,13 @@ struct Quiz1920View: View {
                 }; if userGuessIndex != nil {
                 Button(action: {
                     self.i = self.i + 1;
+                    
                 }){
                     Text("Next")
                 };
             }
+            
+            
             }
 
     }
